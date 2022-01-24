@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import {Container, Row} from "reactstrap";
+import Exercise from "./Components/Exercise";
+import NavBar from "./Components/NavBar";
+import {Route, Routes} from "react-router-dom";
+import React from "react";
+import Settings from "./Components/Settings";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    return (
+        <Container className="bg-light border App" fluid="xl">
+            <Row>
+                <NavBar/>
+                <Routes>
+                    <Route path="/" exact element={<Exercise type="squats"/>}/>
+                    <Route path="/squats" exact element={<Exercise type="squats"/>}/>
+                    <Route path="/bench-press" exact element={<Exercise type="benchPress"/>}/>
+                    <Route path="/dead-lift" exact element={<Exercise type="deadLift"/>}/>
+                    <Route path="/overhead-press" exact element={<Exercise type="overheadPress"/>}/>
+                    <Route path="/settings" exact element={<Settings/>}/>
+                </Routes>
+            </Row>
+        </Container>
+    );
 }
 
 export default App;
