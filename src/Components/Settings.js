@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
 
-const Settings = (props) => {
+const Settings = () => {
     let [enableMiniPlates, setEnableMiniPlates] = useState(false);
 
     function handleChange(e) {
@@ -39,8 +38,5 @@ const Settings = (props) => {
         </div>
     );
 };
-
-Settings.propTypes = {};
-Settings.defaultProps = {};
 
 export default Settings;

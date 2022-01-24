@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Col, Form, FormGroup, Input, Label, Table} from "reactstrap";
-import PlateModal from "./Modal";
 
 class Exercise extends Component {
     constructor(props) {
@@ -126,8 +125,6 @@ class Exercise extends Component {
             </Col>
         );
     }
-
-
 }
 
 export default Exercise;
